@@ -1,8 +1,10 @@
--- ====================================
---            PRODUCT ANALYSIS
--- ====================================
+-- ================================================================
+--                        PRODUCT ANALYSIS
+-- ================================================================
 
+-- ================================================================
 -- 1. Inventory by category
+-- ================================================================
 SELECT
 	product_id,
 	product_name,
@@ -11,7 +13,9 @@ SELECT
 FROM products
 ORDER BY category;
 
+-- ================================================================
 -- 2. Remaining stock after sales
+-- ================================================================
 WITH product_sales AS (
     SELECT
         product_id,
@@ -32,7 +36,9 @@ LEFT JOIN product_sales AS ps
     ON p.product_id = ps.product_id
 ORDER BY remaining_stock DESC;
 
+-- ================================================================
 -- 3. Top 10 products that generate the most revenue
+-- ================================================================
 SELECT
 	p.product_id,
 	p.product_name,
@@ -50,7 +56,9 @@ GROUP BY
 ORDER BY total_revenue DESC
 LIMIT 10;
 
+-- ================================================================
 -- 4. Each product's percentage of the total revenue
+-- ================================================================
 WITH product_revenue AS (
 	SELECT
 		p.product_id,
@@ -76,7 +84,9 @@ SELECT
 FROM product_revenue
 ORDER BY revenue DESC;
 
+-- ================================================================
 -- 5.Each category's best performing product
+-- ================================================================
 WITH product_revenue AS (
     SELECT
         p.product_id,
@@ -114,7 +124,9 @@ FROM ranked_products
 WHERE category_rank = 1
 ORDER BY category;
 
+-- ================================================================
 -- 6. Products whose sales are declining
+-- ================================================================
 WITH monthly_product_sales AS (
 	SELECT
 		p.product_id,
