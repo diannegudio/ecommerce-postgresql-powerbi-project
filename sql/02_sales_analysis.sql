@@ -1,12 +1,16 @@
--- ====================================
---            SALES ANALYSIS
--- ====================================
+-- ================================================================
+--                         SALES ANALYSIS
+-- ================================================================
 
+-- ================================================================
 -- 1. Total revenue
+-- ================================================================
 SELECT SUM(total_amount) AS total_revenue
 FROM orders;
 
+-- ================================================================
 -- 2. Monthly revenue
+-- ================================================================
 SELECT
 	DATE_TRUNC('month', order_date) AS month,
 	SUM(total_amount) AS revenue
@@ -14,7 +18,9 @@ FROM orders
 GROUP BY DATE_TRUNC('month', order_date)
 ORDER BY month;
 
+-- ================================================================
 -- 3. Yearly revenue and growth percentage
+-- ================================================================
 WITH yearly_revenue AS (
 	SELECT
 		EXTRACT(YEAR FROM order_date) AS year,
@@ -22,7 +28,6 @@ WITH yearly_revenue AS (
 	FROM orders
 	GROUP BY EXTRACT(YEAR FROM order_date)
 ),
-
 revenue_comparison AS (
 	SELECT
 		year,
@@ -32,7 +37,6 @@ revenue_comparison AS (
 		) AS previous_year_revenue
 	FROM yearly_revenue
 )
-
 SELECT
 	year,
 	ROUND(revenue, 2) AS revenue,
@@ -43,7 +47,9 @@ SELECT
 FROM revenue_comparison
 ORDER BY year;
 
+-- ================================================================
 -- 4. Best-selling product categories
+-- ================================================================
 SELECT
 	p.category,
 	SUM(oi.quantity * oi.unit_price) AS revenue
@@ -53,7 +59,9 @@ INNER JOIN products as p
 GROUP BY p.category
 ORDER BY revenue DESC;
 
+-- ================================================================
 -- 5. Top 10 products by revenue
+-- ================================================================
 SELECT 
 	p.product_id,
 	p.product_name,
@@ -67,7 +75,9 @@ GROUP BY
 ORDER BY revenue DESC
 LIMIT 10;
 
+-- ================================================================
 -- 6. Month when each product had its highest sales
+-- ================================================================
 WITH monthly_product_revenue AS (
 	SELECT
         p.product_id,
@@ -84,7 +94,6 @@ WITH monthly_product_revenue AS (
         p.product_name,
         DATE_TRUNC('month', o.order_date)
 ),
-
 ranked_months AS (
     SELECT
         product_id,
@@ -97,7 +106,6 @@ ranked_months AS (
         ) AS month_rank
     FROM monthly_product_revenue
 )
-
 SELECT
     product_id,
     product_name,
