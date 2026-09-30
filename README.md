@@ -45,3 +45,8 @@ This project answers questions such as:
 * What is the yearly revenue and growth percentage per year?
 * What are the best-selling product categories?
 * When did each product have its highest sales?
+* What is the remaining stock after sales?
+* What is each category's best-performing product?
+* Which products have declining sales?
+* What is the distribution of in-store vs. delivery orders?
+* How do the years rank by the number of orders?
