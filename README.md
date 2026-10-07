@@ -59,20 +59,19 @@ The PostgreSQL-based e-commerce database project was further analyzed and visual
   
   The dashboard pages are:
   ## 1. Sales Insights
-  Visual cards for the Total Revenue, Total Orders, and Average Order Value
-  Line chart for the Yearly Sales Trend
-  Donut chart for the Customer Distribution by City
-  Column chart for the Sales Distribution by Category
-  Bar chart for the Top 5 Products
+  * Visual cards for the Total Revenue, Total Orders, and Average Order Value
+  * Line chart for the Yearly Sales Trend
+  * Donut chart for the Customer Distribution by City
+  * Column chart for the Sales Distribution by Category
+  * Bar chart for the Top 5 Products
   
   ## 2. Product Performance Dashboard
-  Visual cards for the Total Sales, Products Sold, Quantity Sold, and Average Selling Price
-  Bar chart for the Total Sales per Product
-  Line chart for the Total Sales by Year, Category
+  * Visual cards for the Total Sales, Products Sold, Quantity Sold, and Average Selling Price
+  * Bar chart for the Total Sales per Product
+  * Line chart for the Total Sales by Year, Category
   
   ## 3. Customer Behavior Insights
-  Visual cards for the Number of Customers, and Customer Orders
-  Column chart for the Total Customers by Year
-  Bar chart for the Top 10 Customers by Spending
-  Donut chart for the Customer Payment Preferences
-    
+  * Visual cards for the Number of Customers, and Customer Orders
+  * Column chart for the Total Customers by Year
+  * Bar chart for the Top 10 Customers by Spending
+  * Donut chart for the Customer Payment Preferences
