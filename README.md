@@ -1,4 +1,4 @@
-# ecommerce-postgresql-power-bi-project
+# ecommerce-postgresql-powerbi-project
 # Project Overview
 This is a PostgreSQL-based e-commerce database project created to demonstrate SQL skills through realistic customer, order, product, and sales analysis.
 The dataset represents a simplified e-commerce business where customers placed orders containing multiple products. 
