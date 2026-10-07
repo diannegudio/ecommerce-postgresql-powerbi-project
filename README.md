@@ -3,6 +3,7 @@
 This is a PostgreSQL-based e-commerce database project created to demonstrate SQL skills through realistic customer, order, product, and sales analysis.
 The dataset represents a simplified e-commerce business where customers placed orders containing multiple products. 
 SQL queries are used to explore customer spending, order values, purchasing behavior, and business-related insights.
+Power BI is used to transform the analysis into interactive dashboards and visualizations.
 
 # Database Structure
 This database contains the following main tables:
