@@ -32,7 +32,7 @@ This project focuses on writing clean and structured queries applying the follow
 * Aggregate functions such as `SUM()`, `AVG()`, `COUNT()`, `MIN()`, and `MAX()`
 * Join clauses such as `JOIN`, `INNER JOIN`, `LEFT JOIN`, and `CROSS JOIN`
 * Common Table Expressions (CTEs)
-* Window Functions such as `ROW_NUMBER()`, `RANK()`, `PARTION BY`, and `OVER()`
+* Window Functions such as `ROW_NUMBER()`, `RANK()`, `PARTITION BY`, and `OVER()`
 * Date and time functions
 * Data filtering and transformation
 
@@ -50,3 +50,29 @@ This project answers questions such as:
 * Which products have declining sales?
 * What is the distribution of in-store vs. delivery orders?
 * How do the years rank by the number of orders?
+
+# Power BI Dashboard & Visualization
+The PostgreSQL-based e-commerce database project was further analyzed and visualized using Microsoft Power BI. 
+  ## Dashboard Preview
+  The Power BI report file is available in the `powerbi` folder.
+  It provides an interactive overview of sales performance, product performance, and customer behavior.
+  
+  The dashboard pages are:
+  ## 1. Sales Insights
+  Visual cards for the Total Revenue, Total Orders, and Average Order Value
+  Line chart for the Yearly Sales Trend
+  Donut chart for the Customer Distribution by City
+  Column chart for the Sales Distribution by Category
+  Bar chart for the Top 5 Products
+  
+  ## 2. Product Performance Dashboard
+  Visual cards for the Total Sales, Products Sold, Quantity Sold, and Average Selling Price
+  Bar chart for the Total Sales per Product
+  Line chart for the Total Sales by Year, Category
+  
+  ## 3. Customer Behavior Insights
+  Visual cards for the Number of Customers, and Customer Orders
+  Column chart for the Total Customers by Year
+  Bar chart for the Top 10 Customers by Spending
+  Donut chart for the Customer Payment Preferences
+    
