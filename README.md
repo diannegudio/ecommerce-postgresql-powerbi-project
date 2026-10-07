@@ -57,7 +57,7 @@ The PostgreSQL-based e-commerce database project was further analyzed and visual
   The Power BI report file is available in the `powerbi` folder.
   It provides an interactive overview of sales performance, product performance, and customer behavior.
   
-  The dashboard pages are:
+  The dashboard pages include:
   ## 1. Sales Insights
   * Visual cards for the Total Revenue, Total Orders, and Average Order Value
   * Line chart for the Yearly Sales Trend
